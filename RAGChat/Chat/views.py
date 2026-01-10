@@ -6,6 +6,8 @@ from .serializers import PDFUploadedSerializer,PDFDocumentSerializer
 from .models import PDFDocument
 from rest_framework import status
 from rest_framework.response import Response
+from .utils import PDFProcessor
+import threading
 
 # Create your views here.
 
@@ -33,6 +35,7 @@ class PDFUploadAPI(APIView):
                 title=title,
                 pdf_file=pdf_file
             )
+            self._process_in_background(document)
             return Response({
                 'success': True,
                 'message': 'PDF uploaded successfully. Processing started.',
@@ -45,6 +48,37 @@ class PDFUploadAPI(APIView):
                 'error': 'Upload failed',
                 'message': str(e)
             }, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+
+    def get(self, request):
+        documents = PDFDocument.objects.filter(user=request.user)
+        serializer = PDFDocumentSerializer(documents, many=True)
+        return Response({
+            'success': True,
+            'documents': serializer.data
+        })
+    def _process_in_background(self,document):
+
+        def process():
+            try:
+                processor=PDFProcessor(document)
+                pages = processor.extract_text()
+                chunks = processor.chunk_text(pages)
+                processor.create_vector_store(chunks)
+
+
+                document.save()
+                logger.info(f"Document {document.id} processed successfully")
+
+            except Exception as e:
+               logger.error(f"Processing failed for {document.id}: {str(e)}")
+               document.delete()
+
+        thread = threading.Thread(target=process)
+        thread.daemon = True
+        thread.start()
+
+
+
 
 
 

@@ -4,54 +4,100 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="72e44062-1952-4d04-b045-c9aae1ac8370" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/PythonProject1.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RAGChat/.gitignore" afterDir="false" />
+    <list default="true" id="72e44062-1952-4d04-b045-c9aae1ac8370" name="Changes" comment="Set up project with Authentication system and File upload path">
       <change afterPath="$PROJECT_DIR$/RAGChat/Chat/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RAGChat/Chat/admin.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RAGChat/Chat/apps.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RAGChat/Chat/consumers.py" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/RAGChat/Chat/migrations/0001_initial.py" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/RAGChat/Chat/migrations/0002_alter_pdfdocument_id.py" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/RAGChat/Chat/migrations/0003_pdfdocument_chat_pdfdoc_user_id_2db017_idx.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RAGChat/Chat/migrations/0004_documentchunk.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RAGChat/Chat/migrations/0005_pdfdocument_vector_collection.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RAGChat/Chat/migrations/0006_remove_pdfdocument_vector_collection.py" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/RAGChat/Chat/migrations/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RAGChat/Chat/models.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RAGChat/Chat/serializers.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RAGChat/Chat/tests.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RAGChat/Chat/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RAGChat/Chat/views.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RAGChat/Chat/routing.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RAGChat/Chat/utils.py" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/RAGChat/RAGChat.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RAGChat/RAGChat/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RAGChat/RAGChat/asgi.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RAGChat/RAGChat/settings.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RAGChat/RAGChat/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RAGChat/RAGChat/wsgi.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RAGChat/db.sqlite3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RAGChat/manage.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RAGChat/__init__.py" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/RAGChat/media/users1/pdfs/Khaled-Gaafar.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RAGChat/media/users1/pdfs/Khaled-Gaafar_1Um3ImY.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RAGChat/media/users1/pdfs/Khaled-Gaafar_2GIPnml.pdf" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/RAGChat/media/users1/pdfs/Khaled-Gaafar_2zWrMVj.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RAGChat/media/users1/pdfs/Khaled-Gaafar_4HvYvW9.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RAGChat/media/users1/pdfs/Khaled-Gaafar_4TCfwN9.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RAGChat/media/users1/pdfs/Khaled-Gaafar_4eE5J27.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RAGChat/media/users1/pdfs/Khaled-Gaafar_6osxXIG.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RAGChat/media/users1/pdfs/Khaled-Gaafar_71xWRIm.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RAGChat/media/users1/pdfs/Khaled-Gaafar_7NmLlWt.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RAGChat/media/users1/pdfs/Khaled-Gaafar_BDjloA0.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RAGChat/media/users1/pdfs/Khaled-Gaafar_DJM2NxB.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RAGChat/media/users1/pdfs/Khaled-Gaafar_GdEqbHU.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RAGChat/media/users1/pdfs/Khaled-Gaafar_IX72pfg.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RAGChat/media/users1/pdfs/Khaled-Gaafar_K7Bt5YT.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RAGChat/media/users1/pdfs/Khaled-Gaafar_LHO5N5Q.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RAGChat/media/users1/pdfs/Khaled-Gaafar_N7MPGJ5.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RAGChat/media/users1/pdfs/Khaled-Gaafar_O125pU2.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RAGChat/media/users1/pdfs/Khaled-Gaafar_Oi9AkcT.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RAGChat/media/users1/pdfs/Khaled-Gaafar_OpDuaOw.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RAGChat/media/users1/pdfs/Khaled-Gaafar_Rcy1U9L.pdf" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/RAGChat/media/users1/pdfs/Khaled-Gaafar_jCu54jZ.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RAGChat/media/users1/pdfs/Khaled-Gaafar_m2DOUx3.pdf" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/RAGChat/media/users1/pdfs/Khaled-Gaafar_oBqfhwt.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RAGChat/media/users1/pdfs/Khaled-Gaafar_oFkBR0a.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RAGChat/media/users1/pdfs/Khaled-Gaafar_rNje9Ki.pdf" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/RAGChat/media/users1/pdfs/Khaled-Gaafar_shIgF5I.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RAGChat/media/users1/pdfs/Khaled-Gaafar_sqhU7fY.pdf" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/RAGChat/media/users1/pdfs/Khaled-Gaafar_tj182zg.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RAGChat/requirements.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RAGChat/media/users1/pdfs/Khaled-Gaafar_xe7Ve4o.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RAGChat/media/users1/pdfs/Khaled-Gaafar_zo2Zq6s.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RAGChat/media/users2/pdfs/Khaled-Gaafar.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RAGChat/media/vector_stores/1/28/documents.pkl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RAGChat/media/vector_stores/1/28/vectorizer.pkl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RAGChat/media/vector_stores/2/29/documents.pkl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RAGChat/media/vector_stores/2/29/vectorizer.pkl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/PythonProject1.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/PythonProject1.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RAGChat/Chat/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/RAGChat/Chat/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RAGChat/Chat/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/RAGChat/Chat/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RAGChat/Chat/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/RAGChat/Chat/serializers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RAGChat/Chat/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/RAGChat/Chat/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RAGChat/Chat/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/RAGChat/Chat/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RAGChat/RAGChat/asgi.py" beforeDir="false" afterPath="$PROJECT_DIR$/RAGChat/RAGChat/asgi.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RAGChat/RAGChat/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/RAGChat/RAGChat/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RAGChat/RAGChat/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/RAGChat/RAGChat/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RAGChat/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/RAGChat/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RAGChat/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/RAGChat/requirements.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "customColor": "",
-  "associatedIndex": 7
-}]]></component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;KhaledGaafar&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/KhaledGaafar/RAG-System&quot;,
+    &quot;accountId&quot;: &quot;be7500a8-0cc7-49fc-8256-c707c85c9bda&quot;
+  }
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 7
+}</component>
   <component name="ProjectId" id="37ypscVBLwUAAKpLg5S7W16XKXt" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -63,9 +109,20 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "master"
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "/home/khaled/PythonProject1/RAGChat",
+    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/RAGChat" />
+      <recent name="$PROJECT_DIR$/RAGChat/Chat" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/RAGChat/RAGChat" />
+    </key>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -81,6 +138,30 @@
       <option name="presentableId" value="Default" />
       <updated>1767885372867</updated>
     </task>
+    <task id="LOCAL-00001" summary="Set up project with Authentication system and File upload path">
+      <option name="closed" value="true" />
+      <created>1767921957497</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1767921957497</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Set up project with Authentication system and File upload path" />
+    <option name="LAST_COMMIT_MESSAGE" value="Set up project with Authentication system and File upload path" />
   </component>
 </project>

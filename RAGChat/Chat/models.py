@@ -20,4 +20,10 @@ class PDFDocument(models.Model):
         return f"{self.title} ({self.user.username})"
 
 
+class DocumentChunk(models.Model):
+    document = models.ForeignKey(PDFDocument, on_delete=models.CASCADE, related_name='chunks')
+    text = models.TextField()
+
+
+
 

@@ -5,7 +5,7 @@ from .models import PDFDocument
 class UserSerializer(serializers.ModelSerializer):
     class Meta:
         model=User
-        fields=['id','username','email']
+        fields=['username']
 
 class PDFDocumentSerializer(serializers.ModelSerializer):
     user=UserSerializer(read_only=True)
@@ -33,3 +33,12 @@ class PDFUploadedSerializer(serializers.Serializer):
             raise serializers.ValidationError("File size must not exceed 100MB")
 
         return value
+
+class ChatQuerySerializer(serializers.Serializer):
+    query = serializers.CharField(
+        required=True,
+        max_length=1000,
+    )
+    document_id = serializers.UUIDField(
+        required=False
+    )

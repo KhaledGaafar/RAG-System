@@ -9,9 +9,16 @@ https://docs.djangoproject.com/en/6.0/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/6.0/ref/settings/
 """
+
 import os
 
-SECRET_KEY = os.getenv('SECRET_KEY')
+
+from dotenv import load_dotenv
+
+load_dotenv()
+
+SECRET_KEY = os.getenv('DJANGO_SECRET_KEY')
+GROQ_API_KEY = os.getenv('GROQ_API_KEY')
 
 from pathlib import Path
 
@@ -27,20 +34,23 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
 
 INSTALLED_APPS = [
+    'daphne',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rest_framework',
     'djoser',
     'rest_framework_simplejwt',
+    'channels',
     'Chat'
 ]
 
@@ -55,6 +65,10 @@ MIDDLEWARE = [
 ]
 
 REST_FRAMEWORK = {
+    'DEFAULT_RENDERER_CLASSES': [
+        'rest_framework.renderers.JSONRenderer',
+        'rest_framework.renderers.BrowsableAPIRenderer',
+    ],
     'DEFAULT_AUTHENTICATION_CLASSES': [
         'rest_framework_simplejwt.authentication.JWTAuthentication',
         'rest_framework.authentication.SessionAuthentication',
@@ -92,6 +106,7 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'RAGChat.wsgi.application'
+ASGI_APPLICATION = 'RAGChat.asgi.application'
 
 
 # Database
@@ -152,6 +167,8 @@ SIMPLE_JWT = {
     'ACCESS_TOKEN_LIFETIME': timedelta(minutes=300),
     'REFRESH_TOKEN_LIFETIME': timedelta(days=1),
 }
+
+
 
 
 LOGGING = {
