@@ -208,19 +208,22 @@ class LLMService:
             )
 
             system_prompt = """You are a helpful assistant that answers questions based on the provided context.
-            Context comes from user-uploaded PDF documents.
+                  Context comes from user-uploaded PDF documents.
 
-            Guidelines:
-            1. If the context doesn't contain relevant information, say "I cannot find this information in the provided documents" answer normally
-            2. Be concise and accurate
-            3. Cite page numbers when available
-            4. If asked about multiple topics, organize the answer clearly
+                  Guidelines:
+                  1. FIRST check if the query can be answered from the provided context.
+                  2. If the context contains relevant information, use it to answer accurately and concisely.
+                  3. If the context does NOT contain relevant information, you should still answer the question normally using your general knowledge.
+                  4. When using context, cite page numbers when available.
+                  5. If asked about multiple topics, organize the answer clearly.
 
-            Context:
-            {context}"""
+                  Important: Only say "I cannot find this information in the provided documents" if the user specifically asks about something that should be in the documents but isn't. Otherwise, just answer normally.
+
+                  Context:
+                  {context}"""
 
             messages = [
-                SystemMessage(content=system_prompt.format(context="/n/n".join(context))),
+                system_prompt.format(context="\n\n".join(context)),
             ]
 
             messages.append(HumanMessage(content=query))

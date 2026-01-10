@@ -38,6 +38,7 @@ fsspec==2025.12.0
 google-auth==2.47.0
 googleapis-common-protos==1.72.0
 greenlet==3.3.0
+groq==0.37.1
 grpcio==1.76.0
 h11==0.16.0
 hf-xet==1.2.0
@@ -51,11 +52,14 @@ idna==3.11
 importlib_metadata==8.7.1
 importlib_resources==6.5.2
 Incremental==24.11.0
+joblib==1.5.3
 jsonpatch==1.33
 jsonpointer==3.0.0
 kubernetes==34.1.0
 langchain==0.0.340
-langsmith==0.0.92
+langchain-core==1.2.7
+langchain-groq==1.1.1
+langsmith==0.6.2
 markdown-it-py==4.0.0
 marshmallow==3.26.2
 mdurl==0.1.2
@@ -78,11 +82,13 @@ opentelemetry-proto==1.39.1
 opentelemetry-sdk==1.39.1
 opentelemetry-semantic-conventions==0.60b1
 opentelemetry-util-http==0.60b1
+orjson==3.11.5
 overrides==7.7.0
 packaging==25.0
 posthog==7.5.1
 propcache==0.4.1
 protobuf==6.33.2
+psycopg2==2.9.11
 pulsar-client==3.9.0
 py-ubjson==0.16.1
 pyasn1==0.6.1
@@ -100,10 +106,14 @@ python-dotenv==1.0.0
 python3-openid==3.2.0
 pytz==2025.2
 PyYAML==6.0.3
+regex==2025.11.3
 requests==2.32.5
 requests-oauthlib==2.0.0
+requests-toolbelt==1.0.0
 rich==14.2.0
 rsa==4.9.1
+scikit-learn==1.8.0
+scipy==1.16.3
 service-identity==24.2.0
 shellingham==1.5.4
 six==1.17.0
@@ -115,6 +125,8 @@ sqlparse==0.5.5
 starlette==0.50.0
 sympy==1.14.0
 tenacity==8.5.0
+threadpoolctl==3.6.0
+tiktoken==0.12.0
 tokenizers==0.22.2
 tqdm==4.67.1
 Twisted==25.5.0
@@ -126,6 +138,7 @@ typing-inspection==0.4.2
 typing_extensions==4.15.0
 ujson==5.11.0
 urllib3==2.3.0
+uuid_utils==0.13.0
 uvicorn==0.40.0
 uvloop==0.22.1
 watchfiles==1.1.1
@@ -135,3 +148,4 @@ wrapt==1.17.3
 yarl==1.22.0
 zipp==3.23.0
 zope.interface==8.1.1
+zstandard==0.25.0
