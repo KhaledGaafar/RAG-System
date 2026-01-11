@@ -50,6 +50,7 @@ This backend implementation provides a complete RAG pipeline that enables users 
 
 5. **Run database migrations**
    ```bash
+   python manage.py makemigrations
    python manage.py migrate
    ```
 
