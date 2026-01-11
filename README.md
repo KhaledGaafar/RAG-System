@@ -112,7 +112,6 @@ file: <pdf_file>
 {
   "id": "doc_id",
   "filename": "document.pdf",
-  "status": "indexed",
   "created_at": "2025-01-11T10:00:00Z"
 }
 ```
