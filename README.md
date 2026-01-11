@@ -56,13 +56,13 @@ This backend implementation provides a complete RAG pipeline that enables users 
     }
    ```
 
-6. **Run database migrations**
+5. **Run database migrations**
    ```bash
    python manage.py makemigrations
    python manage.py migrate
    ```
 
-7. **Start the development server**
+6. **Start the development server**
    ```bash
    python manage.py runserver
    ```
