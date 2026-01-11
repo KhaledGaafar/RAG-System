@@ -26,7 +26,7 @@ This backend implementation provides a complete RAG pipeline that enables users 
 
 1. **Clone the repository**
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/KhaledGaafar/RAG-System.git
    cd RAGChat
    ```
 
