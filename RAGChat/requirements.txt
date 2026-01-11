@@ -55,7 +55,7 @@ jsonpatch==1.33
 jsonpointer==3.0.0
 kubernetes==34.1.0
 
-# ✅ LangChain stack (STABLE)
+
 langchain==0.1.20
 langchain-core==0.1.53
 langchain-groq==0.1.5
@@ -86,7 +86,6 @@ opentelemetry-util-http==0.60b1
 orjson==3.11.5
 overrides==7.7.0
 
-# ✅ FIXED HERE
 packaging==23.2
 
 posthog==7.5.1
