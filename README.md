@@ -45,16 +45,24 @@ This backend implementation provides a complete RAG pipeline that enables users 
 4. **Configure environment variables**
    ```bash
    cp .env.example .env
-   ```
+   ```      
    Edit `.env` with your configuration settings
 
-5. **Run database migrations**
+- If there are problems using an external database (PostgreSQL), you can use the default lightweight database (SQLite) by changing the DATABASES configuration in settings to:
+   ```bash
+   'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+    }
+   ```
+
+6. **Run database migrations**
    ```bash
    python manage.py makemigrations
    python manage.py migrate
    ```
 
-6. **Start the development server**
+7. **Start the development server**
    ```bash
    python manage.py runserver
    ```
